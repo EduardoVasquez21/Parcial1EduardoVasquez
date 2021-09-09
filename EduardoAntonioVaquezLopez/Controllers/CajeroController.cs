@@ -15,17 +15,19 @@ namespace EduardoAntonioVaquezLopez.Controllers
         }
 
         public ActionResult Log(String monto)
-        { 
-            if (monto.Equals("5") && monto.Equals("10"))
+        {
+            int Monto= Convert.ToInt32(monto);
+            //if (monto.Equals("5") /*&& monto.Equals("10")*/)
+            if(Monto%5==0)
+            {
+                return Redirect("/Cajero/SecundarioMenu");
+            }
+
+            else
             {
                 return Redirect("/Cajero/Error");
             }
-            return Redirect("/Cajero/SecundarioMenu");
-            //else
-            //{
-            //    return Redirect("/Cajero/Error");
-            //}
-            ////return Redirect("/Cajero/Error");
+
 
         }
 
