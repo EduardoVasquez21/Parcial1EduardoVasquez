@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cajero Automatico</h2>
+<h2>Welcome</h2>
+@using (Html.BeginForm("Log", "Cajero", FormMethod.Post))
+{
+<label>monto</label>
+
+<input type="number" name="monto" required placeholder="Escribe tu Monto" value="" />
+<br />
+<input type="submit">
+<br>
+}
